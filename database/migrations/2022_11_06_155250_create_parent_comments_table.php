@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->bigInteger('user_id')->unsigned();
             $table->bigInteger('post_id')->unsigned();
+            $table->string('parent_comment',255);
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('user_data')
