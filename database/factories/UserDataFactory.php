@@ -17,7 +17,11 @@ class UserDataFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'username' => fake()->name(),
+            'password' => fake()->password(),
+            'email' => fake()->email(),
+             //stack overflow
+            //  
         ];
     }
 }
