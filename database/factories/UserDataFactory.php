@@ -18,8 +18,10 @@ class UserDataFactory extends Factory
     {
         return [
             'username' => fake()->name(),
+            'firstname' => fake()->firstName($gender = null|'male'|'female'),
+            'surname' => fake()->lastName,
             'password' => fake()->password(),
-            'email' => fake()->email(),
+            'email' => fake()->safeEmail(),
              //stack overflow
             //  
         ];
