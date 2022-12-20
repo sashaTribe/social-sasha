@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class ParentComment extends Model
 {
     use HasFactory;
+
+    public function comments() {
+        return $this->hasMany(Comments::class);
+    }
+
+    public function user() {
+        return $this->hasOne(UserData::class);
+    } 
+
 }
