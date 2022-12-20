@@ -13,4 +13,16 @@ class UserData extends Model
     {
         return $this->hasOne(Likes::class);
     }
+
+    public function posts(){
+        return $this->hasMany(Post::class);
+    }
+
+    public function comments(){
+        return $this->hasMany(Comments::class);
+    }
+
+    public function parentComments(){
+        return $this->hasMany(ParentComment::class);
+    }
 }
