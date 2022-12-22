@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\UserData;
 class UserDataController extends Controller
 {
     /**
@@ -14,6 +14,8 @@ class UserDataController extends Controller
     public function index()
     {
         //
+        $users = UserData::all();
+        return view('UserData.index', ['users' => $users]);
     }
 
     /**
