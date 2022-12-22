@@ -15,7 +15,7 @@ class UserDataController extends Controller
     {
         //
         $users = UserData::all();
-        return view('UserData.index', ['users' => $users]);
+        return view('users.index', ['users' => $users]);
     }
 
     /**
