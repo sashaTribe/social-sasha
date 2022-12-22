@@ -14,7 +14,7 @@ class UserDataController extends Controller
     public function index()
     {
         //
-        $users = UserData::all();
+        $users = UserData::get();
         return view('users.index', ['users' => $users]);
     }
 

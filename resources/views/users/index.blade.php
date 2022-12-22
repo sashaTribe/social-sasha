@@ -1,3 +1,4 @@
+use App\Models\UserData;
 @extends('layouts.app');
 
 @section('title', 'Users')
