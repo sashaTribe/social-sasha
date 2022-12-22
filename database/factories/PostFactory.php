@@ -18,6 +18,9 @@ class PostFactory extends Factory
     {
         return [
             //
+            'post_name' => fake() -> word(),
+            'post_content' => fake() -> text($maxNbChars = 500),
+            'user_id' => fake() -> numberBetween($min = 1, $max = 51),
         ];
     }
 }

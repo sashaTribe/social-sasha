@@ -18,6 +18,9 @@ class ParentCommentFactory extends Factory
     {
         return [
             //
+            'user_id' => fake()->numberBetween($min = 1, $max = 51),
+            'post_id' => fake()->numberBetween($min = 1, $max = 52),
+            'parent_comment' => fake()-> text($maxNbChars = 200),
         ];
     }
 }

@@ -16,10 +16,10 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
         $this->call(UserDataSeeder::class);
-        //$this->call(PostSeeder::class);
-        //$this->call(LikesSeeder::class);
-        //$this->call(ParentCommentSeeder::class);
-       // $this->call(CommentSeeder::class);
+        $this->call(PostSeeder::class);
+        $this->call(LikesSeeder::class);
+        $this->call(ParentCommentSeeder::class);
+        $this->call(CommentSeeder::class);
         
 
         // \App\Models\User::factory()->create([

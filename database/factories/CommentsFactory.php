@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Comment>
  */
-class CommentFactory extends Factory
+class CommentsFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,7 +17,9 @@ class CommentFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'user_id' => fake()->numberBetween($min = 1, $max = 51),
+            'parent_id' => fake()->numberBetween($min = 1, $max = 52),
+            'parent_comment' => fake()-> text($maxNbChars = 200),
         ];
     }
 }

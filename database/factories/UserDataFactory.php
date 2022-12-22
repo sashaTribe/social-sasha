@@ -1,7 +1,7 @@
 <?php
 
 namespace Database\Factories;
-use App\Models\UserData;
+
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -18,7 +18,7 @@ class UserDataFactory extends Factory
     {
         return [
             'username' => fake()->name(),
-            'firstname' => fake()->firstName($gender = null|'male'|'female'),
+            'firstname' => fake()->firstName($gender = 'male'|'female'),
             'surname' => fake()->lastName,
             'password' => fake()->password(),
             'email' => fake()->safeEmail(),
