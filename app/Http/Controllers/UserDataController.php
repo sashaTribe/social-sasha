@@ -15,8 +15,7 @@ class UserDataController extends Controller
     {
         //
         $users = UserData::get();
-        return view('users.index', ['users' => $users]); 
-        return view('users.show');
+        return view('users.index', ['users' => $users]);
     }
 
     /**
@@ -27,7 +26,6 @@ class UserDataController extends Controller
     public function create()
     {
         //
-        return view('users.create');
     }
 
     /**
@@ -39,7 +37,6 @@ class UserDataController extends Controller
     public function store(Request $request)
     {
         //
-        dd($request['username']);
     }
 
     /**
@@ -51,8 +48,6 @@ class UserDataController extends Controller
     public function show($id)
     {
         //
-        $user = UserData::findOrFail($id);
-        return view('users.show', ['user' => $user]);
     }
 
     /**

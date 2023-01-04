@@ -7,8 +7,8 @@
     <p>Users in Social Sasha: </p>
     <ul>
     @foreach($users as $user)
-        <li><a href="/users/{{$user -> id}}">{{ $user->firstname  }}</li>
+        <li>{{ $user -> firstName}}</li>
     @endforeach
     </ul> 
-@endsection
+    
     
