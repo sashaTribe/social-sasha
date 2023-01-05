@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserDataController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,4 +19,8 @@ Route::get('/', function () {
 });
 
 
-Route::get('/users', 'App\Http\Controllers\UserDataController@index');
+Route::get('/users', [UserDataController::class, 'index']);
+Route::get('/users/{id}', [UserDataController::class, 'show'])
+    ->name('users.show');
+Route::get('/users',[UserDataController::class, 'create'])->name('users.create');
+Route::post('/users',[UserDataController::class, 'store'])->name('users.store');
